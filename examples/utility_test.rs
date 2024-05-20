@@ -1,9 +1,9 @@
-use v4_rust_sdk::clients::indexer_client::IndexerClient;
-use v4_rust_sdk::clients::utility::Utility;
+use dydx_v4_rust_sdk::clients::indexer_client::IndexerClient;
+use dydx_v4_rust_sdk::clients::utility::Utility;
 
 #[tokio::main]
 async fn main() {
-    let indexer_client = IndexerClient::new("https://dydx-testnet.imperator.co");
+    let indexer_client = IndexerClient::new("https://indexer.dydx.trade");
     let utility = Utility{};    
     let response = utility.get_time(&indexer_client).await;
 
